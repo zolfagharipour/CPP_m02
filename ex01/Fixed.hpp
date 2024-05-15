@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 19:15:10 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/05/14 20:29:39 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/05/15 16:04:11 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FIXED_H
 
 # include <iostream>
+# include <cmath>
 
 class Fixed
 {
@@ -22,12 +23,17 @@ private:
     int                 _nbr;
 public:
     Fixed();
+    Fixed( const int nbr );
+    Fixed( const float nbr );
     Fixed( const Fixed& other );
     ~Fixed();
     Fixed&  operator=( const Fixed& other );
+    friend std::ostream&  operator<<(std::ostream& os ,const Fixed& other);
     
     int     getRawBits( void ) const;
     void    setRawBits( int const raw );
+    float   toFloat( void ) const;
+    int     toInt( void ) const;
 };
 
 
