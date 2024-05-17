@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 19:15:10 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/05/15 16:04:11 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/05/17 14:35:35 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ public:
     Fixed( const Fixed& other );
     ~Fixed();
     Fixed&  operator=( const Fixed& other );
-    friend std::ostream&  operator<<(std::ostream& os ,const Fixed& other);
     
     int     getRawBits( void ) const;
     void    setRawBits( int const raw );
@@ -36,6 +35,7 @@ public:
     int     toInt( void ) const;
 };
 
+std::ostream&  operator<<( std::ostream& os, const Fixed& other);
 
 
 #endif
