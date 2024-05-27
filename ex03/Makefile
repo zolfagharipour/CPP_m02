@@ -6,13 +6,13 @@
 #    By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/14 19:13:38 by mzolfagh          #+#    #+#              #
-#    Updated: 2024/05/14 20:32:04 by mzolfagh         ###   ########.fr        #
+#    Updated: 2024/05/19 19:21:36 by mzolfagh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = BSP
 
-SRCS =  main.cpp Fixed.cpp
+SRCS =  main.cpp Bsp.cpp Fixed.cpp 
 
 OBJS = ${SRCS:.c=.o}
 

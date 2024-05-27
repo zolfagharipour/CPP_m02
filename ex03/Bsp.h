@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Bsp.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/14 19:16:21 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/05/19 19:14:22 by mzolfagh         ###   ########.fr       */
+/*   Created: 2024/05/19 19:13:17 by mzolfagh          #+#    #+#             */
+/*   Updated: 2024/05/19 19:14:07 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bsp.h"
+#ifndef BSP_H
+# define BSP_H
 
-int main( void ) {
-    Point a(0, 0);
-    Point b(4, 0);
-    Point c(2, 0);
-    
-    Point p(2, 2);
-    
-    std::cout << p.getX() << std::endl;
-    std::cout << p.getY() << std::endl;
-    std::cout << bsp(a, b, c, p) << std::endl;
-}
+#include "Point.hpp"
+
+bool    bsp( Point const a, Point const b, Point const c, Point const point );
+
+#endif
