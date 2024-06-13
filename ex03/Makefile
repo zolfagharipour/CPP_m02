@@ -6,34 +6,35 @@
 #    By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/14 19:13:38 by mzolfagh          #+#    #+#              #
-#    Updated: 2024/05/19 19:21:36 by mzolfagh         ###   ########.fr        #
+#    Updated: 2024/06/01 11:24:20 by mzolfagh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = BSP
 
-SRCS =  main.cpp Bsp.cpp Fixed.cpp 
+SRCS =  main.cpp Bsp.cpp Fixed.cpp Point.cpp
 
-OBJS = ${SRCS:.c=.o}
+OBJS = ${SRCS:.cpp=.o}
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -g -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 RM	=	rm -rf
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	${CC} ${CFLAGS} -o ${NAME} $^
+	${CXX} ${CXXFLAGS} -o ${NAME} $^
 
-bonus: ${BONUS_OBJS}
-	${CC} ${CFLAGS} -o ${NAME} $^
-
-# clean: 
-# 	${RM} ${OBJS} ${BONUS_OBJS}
+%.o: %.cpp
+	${CXX} ${CXXFLAGS} -c $< -o $@
 
 
-fclean:
-	${RM} ${NAME} ${CHECK}
+clean: 
+	${RM} ${OBJS}
+
+
+fclean: clean
+	${RM} ${NAME}
 
 re: fclean all
 

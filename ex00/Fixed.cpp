@@ -6,7 +6,7 @@
 /*   By: mzolfagh <mzolfagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 19:15:59 by mzolfagh          #+#    #+#             */
-/*   Updated: 2024/05/15 12:02:07 by mzolfagh         ###   ########.fr       */
+/*   Updated: 2024/06/01 10:57:43 by mzolfagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,3 @@ Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;
 }
-
-// Copy assignment operator called
